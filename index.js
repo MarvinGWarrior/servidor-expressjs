@@ -1,16 +1,9 @@
 const express = require('express');
 const app = express();
 
-app.use(function(req, res, next){
-    console.log('request url: '+ req.url);
-    next();
-});
+const morgan = require('morgan')
 
-app.use((req, res, next) => {
-    console.log('ha pasado por esta funcion');
-    next();
-});
-
+app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
     res.end('Hola Mundo.!');

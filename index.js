@@ -18,6 +18,6 @@ app.get('*', (req, res) => {
     res.end('Pagina no encontrada');
 });
 app.listen(3000, () => {
-    console.log('Server funcionando al pelo');
+    console.log('Server funcionando muy bien');
     console.log('Nombre de la App: ', app.get('appName'));
 });
